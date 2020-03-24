@@ -5,7 +5,10 @@ var topics = ["Goku", "Vegeta", "Trunks", "Frieza", "Jiren",
 var numberOfGIFs = 10;
 var cutOffRating = "PG";
 
+renderButtons();
+
 function renderButtons(){
+	$("#button-container").empty();
 	for(var i = 0; i < topics.length; i++) {
 		var newButton = $("<button>");
 		newButton.addClass("btn");
@@ -21,13 +24,12 @@ function renderButtons(){
 		$("#gif-container").removeClass("dotted-border");
 		populateGIFContainer($(this).text());
 	});
-
 }
 
 function addButton(show){
 	if(topics.indexOf(show) === -1) {
 		topics.push(show);
-		$("#button-container").empty();
+		// $("#button-container").empty();
 		renderButtons();
 	}
 }
