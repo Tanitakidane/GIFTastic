@@ -70,7 +70,7 @@ $(document).ready(function(){
 	renderButtons();
 	$("#submit").on("click", function(){
 		event.preventDefault();
-		addButton($("#cartoon-show").val().trim());
-		$("#cartoon-show").val("");
+		addButton($("#Dragonball-Z").val().trim());
+		$("#Dragonball-Z").val("");
 	});
 });
